@@ -1,0 +1,42 @@
+DOCKERIZED OPENJDK
+
+  Dockerized java and javac executables using OpenJDK 8.
+
+BUILD IMAGE
+
+  make
+
+  or
+
+  make build
+
+INSTALL EXECUTABLES
+
+  make install
+
+  or
+
+  make install_java
+  make install_javac
+
+USAGE
+
+  First, add these lines to your .bashrc to ensure ~/bin is in your PATH:
+
+    if ! echo "${PATH}" | grep -Eq "(^|:)${HOME}/bin(:|$)"; then
+      export PATH=${HOME}/bin:${PATH}
+    fi
+
+  Then...
+
+    javac ClassName.java
+    java ClassName
+
+UNINSTALL EXECUTABLES
+
+  make uninstall
+
+  or
+
+  make uninstall_java
+  make uninstall_javac
